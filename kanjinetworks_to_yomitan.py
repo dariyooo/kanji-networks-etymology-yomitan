@@ -62,6 +62,8 @@ def build_kanji_bank(kanjis):
         if not char:
             continue
 
+        definition = definition.strip()
+
         # Yomitan format: [character, onyomi, kunyomi, tags, meanings, stats]
         kanji_bank.append([char, "", "", "etymology", [definition], {}])
         
