@@ -1,6 +1,6 @@
 # kanji-networks-etymology-yomitan
 
-Kanji etymologies from Lawrence J. Howell's Kanji Networks for Yomitan and DaLang.
+Kanji etymologies from Lawrence J. Howell's Kanji Networks for Yomitan and DaKanji.
 
 The dictionary contains one `kanji_bank` entry per kanji with its etymology as meaning, tagged `etymology`.
 It is meant to be installed alongside a kanji dictionary like KANJIDIC.
@@ -8,7 +8,7 @@ It is meant to be installed alongside a kanji dictionary like KANJIDIC.
 | Asset | Contents |
 |---|---|
 | `kanji-networks-etymology-yomitan.zip` | Yomitan dictionary |
-| `kanji-networks-etymology-yomitan-dadb.zip` | the same dictionary plus the PDF's introduction (first 7 pages) as DaLang manual |
+| `kanji-networks-etymology-yomitan-dadb.zip` | the same dictionary plus the PDF's introduction (first 7 pages) as DaKanji manual |
 
 ## Sources
 
