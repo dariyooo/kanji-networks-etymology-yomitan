@@ -6,6 +6,9 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "dalang-dict-utils",
+    "kanjinetworks",
+    "pdfminer.six>=20260107",
+    "pypdf>=6.8.0",
 ]
 
 [dependency-groups]
@@ -19,6 +22,8 @@ dev = [
 package = false
 
 [tool.uv.sources]
+# Vendored parser of the Kanji Networks PDF, ported to Python 3 (see vendored_sources/README.md)
+kanjinetworks = { path = "vendored_sources/kanjinetworks", editable = true }
 dalang-dict-utils = { git = "https://github.com/dariyooo/dalang-dict-utils", tag = "v0.2.7" }
 
 [tool.ruff]
