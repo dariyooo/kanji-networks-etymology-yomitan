@@ -1,4 +1,6 @@
-from kanjinetworks import Kanji, KanjiNetworksParser, get_text
+from types import SimpleNamespace
+
+from kanjinetworks import KanjiNetworksParser, get_text
 
 from kanji_networks_etymology.build import INDEX_FIELDS, TMP_DIR, build_kanji_bank
 
@@ -11,9 +13,7 @@ def test_index_has_required_fields():
 def test_strips_pdf_whitespace_from_both_ends():
     expected = "As per 式# (stand straight).\nInternal spacing  stays."
     definition = "\x0c \t\r\n" + expected + " \n\r\t\x0c"
-    kanji = Kanji()
-    kanji.kanji = "試"
-    kanji.definition = definition
+    kanji = SimpleNamespace(kanji="試", definition=definition)  # attributes like the parser's Kanji objects
 
     for obj in (kanji, {"kanji": "試", "definition": definition}):
         assert build_kanji_bank([obj]) == [["試", "", "", "etymology", [expected], {}]]
