@@ -78,9 +78,9 @@ def main() -> None:
     verify_kanji_bank(kanji_bank)
     manual = extract_manual(pdf_path, TMP_DIR / "manual.pdf")
 
-    for package_name, extra_files in (
-        (ASSET, {}),
-        (f"{ASSET}-dadb", {"manual.pdf": manual, "manual_icon.svg": MANUAL_ICON}),
+    for package_name, dict_format, extra_files in (
+        (ASSET, "yomitan", {}),
+        (f"{ASSET}-dadb", "dakanji-dictionary", {"manual.pdf": manual, "manual_icon.svg": MANUAL_ICON}),
     ):
         index = build_index(TITLE, GITHUB_REPO, package_name, **INDEX_FIELDS)
-        package_dictionary(package_name, index, {"kanji_bank": kanji_bank}, extra_files=extra_files)
+        package_dictionary(package_name, index, {"kanji_bank": kanji_bank}, extra_files=extra_files, format=dict_format)

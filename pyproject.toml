@@ -22,7 +22,7 @@ dev = [
 package = false
 
 [tool.uv.sources]
-dalang-dict-utils = { git = "https://github.com/dariyooo/dalang-dict-utils", tag = "v0.2.8" }
+dalang-dict-utils = { git = "https://github.com/dariyooo/dalang-dict-utils", tag = "v0.3.3" }
 # Vendored parser of the Kanji Networks PDF, ported to Python 3 (see vendored_sources/README.md)
 kanjinetworks = { path = "vendored_sources/kanjinetworks" }
 
