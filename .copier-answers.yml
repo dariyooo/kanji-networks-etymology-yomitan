@@ -1,0 +1,10 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v0.2.7
+_src_path: gh:dariyooo/dalang-dict-utils
+dalang_dict_utils_tag: v0.2.7
+description: Kanji etymologies from Lawrence J. Howell's Kanji Networks
+github_owner: dariyooo
+module_name: kanji_networks_etymology
+python_version: '3.12'
+repo_name: kanji-networks-etymology-yomitan
+source_updates: false

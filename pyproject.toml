@@ -1,14 +1,37 @@
 [project]
-name = "kanjinetworks-yomitan"
+name = "kanji-networks-etymology-yomitan"
 version = "0.1.0"
-description = "Add your description here"
+description = "Kanji etymologies from Lawrence J. Howell's Kanji Networks"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 dependencies = [
-    "kanjinetworks",
-    "pdfminer.six>=20260107",
-    "pypdf>=6.8.0",
+    "dalang-dict-utils",
 ]
 
+[dependency-groups]
+dev = [
+    "pyright>=1.1.400",
+    "pytest>=8.3",
+    "ruff>=0.11",
+]
+
+[tool.uv]
+package = false
+
 [tool.uv.sources]
-kanjinetworks = { path = "./kanjinetworks_source", editable = true }
+dalang-dict-utils = { git = "https://github.com/dariyooo/dalang-dict-utils", tag = "v0.2.7" }
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pyright]
+include = ["build.py", "kanji_networks_etymology", "tests"]
+pythonVersion = "3.12"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
