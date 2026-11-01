@@ -301,8 +301,8 @@ wheels = [
 
 [[package]]
 name = "dalang-dict-utils"
-version = "0.2.7"
-source = { git = "https://github.com/dariyooo/dalang-dict-utils?tag=v0.2.7#a1141237e84ddfd16eea5ce2d4c847314e7c0455" }
+version = "0.2.8"
+source = { git = "https://github.com/dariyooo/dalang-dict-utils?tag=v0.2.8#95ddb74bd8691ef7ad224634585af66b1f56b0ac" }
 dependencies = [
     { name = "jsonschema" },
 ]
@@ -363,8 +363,8 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "dalang-dict-utils", git = "https://github.com/dariyooo/dalang-dict-utils?tag=v0.2.7" },
-    { name = "kanjinetworks", editable = "vendored_sources/kanjinetworks" },
+    { name = "dalang-dict-utils", git = "https://github.com/dariyooo/dalang-dict-utils?tag=v0.2.8" },
+    { name = "kanjinetworks", directory = "vendored_sources/kanjinetworks" },
     { name = "pdfminer-six", specifier = ">=20260107" },
     { name = "pypdf", specifier = ">=6.8.0" },
 ]
@@ -379,7 +379,7 @@ dev = [
 [[package]]
 name = "kanjinetworks"
 version = "0.1.8"
-source = { editable = "vendored_sources/kanjinetworks" }
+source = { directory = "vendored_sources/kanjinetworks" }
 dependencies = [
     { name = "pdfminer" },
 ]

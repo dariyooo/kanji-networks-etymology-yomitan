@@ -22,13 +22,15 @@ dev = [
 package = false
 
 [tool.uv.sources]
+dalang-dict-utils = { git = "https://github.com/dariyooo/dalang-dict-utils", tag = "v0.2.8" }
 # Vendored parser of the Kanji Networks PDF, ported to Python 3 (see vendored_sources/README.md)
-kanjinetworks = { path = "vendored_sources/kanjinetworks", editable = true }
-dalang-dict-utils = { git = "https://github.com/dariyooo/dalang-dict-utils", tag = "v0.2.7" }
+kanjinetworks = { path = "vendored_sources/kanjinetworks" }
 
 [tool.ruff]
 line-length = 120
 target-version = "py312"
+# Vendored third-party code stays as it was copied
+extend-exclude = ["vendored_sources"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
